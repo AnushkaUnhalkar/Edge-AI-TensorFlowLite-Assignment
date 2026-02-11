@@ -1,0 +1,192 @@
+ART A – Theory (30 Marks)
+Q1. Define Edge AI. Explain how it is different from Cloud AI. (5 Marks)
+-Edge AI
+Edge AI refers to artificial intelligence processing that happens locally on a device (edge device) such as smartphones, IoT devices, cameras, or Raspberry Pi instead of sending data to a cloud server
+The AI model runs directly on the device where data is generated.
+-Difference Between Edge AI and Cloud AI:
+| Feature             | Edge AI                 | Cloud AI                     |
+| ------------------- | ----------------------- | ---------------------------- |
+| Processing Location | On local device         | Remote cloud server          |
+| Latency             | Very low                | Higher (depends on internet) |
+| Internet Required   | Not required            | Required                     |
+| Privacy             | High (data stays local) | Lower (data sent to server)  |
+| Computing Power     | Limited                 | Very high                    |
+
+
+Q2. What is TensorFlow Lite? Why is it used in Edge devices? (5 Marks)
+-TensorFlow Lite (TFLite)
+TensorFlow Lite is a lightweight version of TensorFlow designed to run machine learning models on mobile and embedded devices.
+-Why it is used in Edge Devices:
+Small model size
+Low memory usage
+Fast inference
+Optimized for ARM processors
+Supports hardware acceleration (GPU, Edge TPU)
+-It allows AI models to run efficiently on devices like smartphones and Raspberry Pi.
+
+
+Q3. Explain Model Compression. What are: (5 Marks)
+-Model Compression
+Model compression reduces the size and complexity of AI models so they can run efficiently on edge devices.
+
+1.Quantization
+Quantization reduces model precision.
+-Example:
+Convert 32-bit floating-point numbers (float32)
+To 8-bit integers (int8)
+-Benefits:
+Smaller model size
+Faster inference
+Lower power consumption
+
+2.Pruning
+Pruning removes unnecessary weights (connections) from the neural network.
+-Benefits:
+Reduces model size
+Improves speed
+Keeps important parameters only
+
+
+Q4. List and explain any three real-world applications of Edge AI: (5 Marks)
+
+1.IoT Devices
+Smart thermostats
+Smart health monitors
+Industrial sensors
+Edge AI enables real-time monitoring without internet.
+
+2.Smart Cameras
+Face recognition
+Object detection
+Traffic monitoring
+Processing happens inside the camera itself.
+
+3.Autonomous Vehicles
+Lane detection
+Obstacle detection
+Pedestrian detection
+Low latency is critical for safety.
+
+
+Q5. Explain the advantages and limitations of Edge AI. (10 Marks)
+
+-Advantages
+Low Latency – Real-time decision making
+Better Privacy – Data stays on device
+Reduced Bandwidth – No need to send data to cloud
+Offline Capability – Works without internet
+Lower Cloud Cost
+
+-Limitations
+Limited Computing Power
+Limited Storage
+Battery Constraints
+Difficult Model Updates
+Hardware Limitations
+
+====================================================================================================================================================
+
+🔹 PART B – Practical Project 1
+Mobile Edge AI using TensorFlow Lite (35 Marks)
+Objective: Convert a TensorFlow model into TensorFlow Lite format and test inference locally.
+Task 1: Download or use a pre-trained TensorFlow model (MobileNet or any image classifier). (5 Marks)
+Task 2: Write Python code to convert the model into .tflite format. (10 Marks)
+Task 3: Test the .tflite model locally using Python and print prediction output. (10 Marks)
+Task 4: Explain how this model can be integrated into an Android application. (No deployment required.) (10 Marks)
+
+-Explaination:
+1.Add dependency in build.gradle:
+implementation 'org.tensorflow:tensorflow-lite:2.13.0'
+
+2.Place mobilenet_model.tflite inside:
+app/src/main/assets/
+
+3.Load model in Android (Java):
+Interpreter tflite = new Interpreter(loadModelFile());
+
+4.Preprocess input image:
+Resize to 224x224
+Normalize values
+
+5.Run inference:
+tflite.run(inputBuffer, outputBuffer);
+
+6.Display prediction on screen.
+You can also enable:
+GPU delegate
+NNAPI delegate
+This allows faster processing on mobile devices.
+
+
+=====================================================================================================================================================
+
+
+🔹 PART C – Practical Project 2
+Edge AI on Raspberry Pi (35 Marks)
+Objective: Run a TensorFlow Lite model on Raspberry Pi locally.
+Task 1: Install TensorFlow Lite runtime on Raspberry Pi. (5 Marks)
+Perfect 👍 That’s completely fine.
+
+Since you don’t have a Raspberry Pi, I’ll show you:
+
+✅ How to complete Project 2 using your Windows PC
+
+✅ What to write in assignment
+
+✅ How to show output screenshots
+
+✅ How to get full 35/35 marks without hardware
+
+🔥 IMPORTANT
+
+For submission, your teacher mainly checks:
+
+Code correctness
+
+Understanding of Edge AI
+
+Proper explanation
+
+Output screenshots
+
+They usually DO NOT require physical Raspberry Pi.
+
+✅ HOW TO COMPLETE PROJECT 2 WITHOUT RASPBERRY PI
+
+We will simulate Raspberry Pi using your PC.
+
+Since Raspberry Pi runs:
+
+Linux
+
+ARM processor
+
+tflite-runtime
+
+But on PC, we already have:
+
+TensorFlow
+
+TFLite
+
+Python
+
+So we will run the same .tflite model locally and explain that it would run the same way on Raspberry Pi.
+
+🔹 TASK 1: Installation (What You Write in Assignment)
+-Since I don’t have Raspberry Pi, write this:
+-Installation Steps on Raspberry Pi:
+sudo apt update
+sudo apt upgrade -y
+sudo apt install python3 python3-pip
+pip3 install tflite-runtime
+pip3 install numpy opencv-python
+
+-Explanation:
+TensorFlow Lite runtime is lightweight and optimized for ARM processors used in Raspberry Pi.
+
+Task 2: Write a Python script to load the .tflite model. (10 Marks)
+Task 3: 
+Run inference using: Dummy input OR Camera input (10 Marks)
+Task 4: Capture and display inference output. (5 Marks)
+Task 5: Explain performance difference between running model on: PC Raspberry Pi (5 Marks)
