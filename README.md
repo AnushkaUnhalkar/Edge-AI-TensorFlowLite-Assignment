@@ -1,4 +1,4 @@
-![WhatsApp Image 2026-02-11 at 11 43 50 PM](https://github.com/user-attachments/assets/7be107d4-4378-43b9-a0e0-1396ea1a37b6)🚀 Mobile & Edge AI Project
+🚀 Mobile & Edge AI Project
 TensorFlow Lite Model Conversion & Edge Deployment (Raspberry Pi Simulation)
 
 📌 Project Overview
@@ -143,3 +143,19 @@ Git version control management
 
 👨‍💻 Author
 Anushka Unhalkar
+
+Outputs: (Screenshots)
+
+![Img1](https://github.com/user-attachments/assets/26d72353-4d84-479e-9eea-ed4cd302212d)
+
+![Img2](https://github.com/user-attachments/assets/b9ccca46-53a8-4f0e-9bd7-73f62accfd64)
+
+![Img3](https://github.com/user-attachments/assets/f121db9e-031b-45ee-84d5-9b4c0802e508)
+
+![Img4](https://github.com/user-attachments/assets/ec14a5d3-a85b-413b-aa06-23bea157722b)
+
+![Img5](https://github.com/user-attachments/assets/2b7b6fe8-9ae1-4da1-8d68-3c7d2d506049)
+
+
+
+
